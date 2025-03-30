@@ -48,7 +48,7 @@ with engine.connect() as connection:
         isbn VARCHAR(13) NULL,
         published_date DATE,
         publisher_id INT NULL,
-        CONSTRAINT fk_publisher FOREIGN KEY (publisher_id) REFERENCES publishers(publisher_id) ON DELETE SET NULL
+        CONSTRAINT fk_publisher FOREIGN KEY (id_publishers) REFERENCES publishers(id_publishers) ON DELETE SET NULL
     );
 
     CREATE TABLE IF NOT EXISTS book_authors (
